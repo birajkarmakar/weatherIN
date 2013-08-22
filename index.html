@@ -1,0 +1,190 @@
+<!--Copyright (C) 2013 Biraj Karmkar <brnet00@gmail.com>>
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.-->
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Weather IN</title> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.1.min.css" />
+	
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/transitions.css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.mobile-1.2.1.min.js"></script>
+	<script type="text/javascript">
+	var clockID = 0;
+function UpdateClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+   var tDate = new Date();
+
+   document.theClock.theTime.value = "" 
+                                   + tDate.getHours() + ":" 
+                                   + tDate.getMinutes() + ":" 
+                                   + tDate.getSeconds();
+   clockID = setTimeout("UpdateClock()", 1000);
+}
+function StartClock() {
+   clockID = setTimeout("UpdateClock()", 500);
+}
+function KillClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+}
+    		
+
+    </script>
+        <!-- User-generated css -->
+        
+        <!-- User-generated js -->
+        <script>
+            try {
+
+    $(function() {
+
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+        </script>
+</head> 
+
+	
+<body onload="StartClock()" onunload="KillClock()">
+
+<!-- Start of first page: #one -->
+
+<div data-role="page" id="two" data-theme="b">
+
+	<div data-theme="a" data-role="header" data-position="fixed">
+        <h5>
+            Weather IN
+        </h5>
+    </div>
+
+	<div data-role="content" >	
+	
+
+		<font size=5, color=Blue><script src="js/greeting.js">
+</script></font>
+
+<h4>Date is 
+<font color=Green><script type="text/javascript" src="js/date.js">
+</script></font>
+</h4>
+<h4>Today is
+<font color=Green><script type="text/javascript" src="js/day.js">
+</script></font>
+</h4>
+<div class="ui-grid-a">
+            <div class="ui-block-a">
+            <h3>
+            Now Time is </h3>
+            </div>
+            <div class="ui-block-b">
+            <form name="theClock">
+   <input type=text name="theTime" size=8 style="text-align: center">
+</form>
+            </div>
+        </div>
+
+
+</h4>
+		<select name="combo" id="combo" data-icon="arrow-d">
+                   <optgroup label="State/Capital">
+    		            <option value="inxx0057">Andhra Pradesh/Hyderabad </option>
+    		            <option value="INXX0190">Arunachal Pradesh/Itanagar</option>
+    		            <option value="inxx0100">Bihar/Patna</option>
+    		            <option value="INXX0228">Chhattisgarh/Raipur </option>
+                    <option value="INXX0387">Goa/Panaji </option>
+                    <option value="INXX0048">Gujarat/Gandhinagar</option>
+                    <option value="INXX0185">Haryana/Chandigarh </option>
+                    <option value="INXX0195">Himachal Pradesh/Shimla</option>
+                    <option value="INXX0222">Jammu and Kashmir/Srinagar</option>
+                    <option value="INXX0152">Jharkhand/Ranchi</option>
+                    <option value="INXX0012">Karnataka/Bengaluru </option>
+                    <option value="INXX0198">Kerala/Thiruvananthapuram</option>
+                    <option value="INXX0023">Madhya Pradesh/Bhopal </option>
+                    <option value="INXX0087">Maharashtra/Mumbai</option>
+                    <option value="INXX0189">Manipur/Imphal </option>
+                    <option value="INXX0196">Meghalaya/Shillong</option>
+                    <option value="INXX0191">Nagaland/Kohima</option>
+                    <option value="INXX0185">Punjab/Chandigarh</option>
+                    <option value="INXX0059">Rajasthan/Jaipur</option>
+                    <option value="INXX0049">Sikkim/Gangtok</option>
+                    <option value="INXX0202">Tamil Nadu/Chennai    </option>
+                    <option value="INXX0153">Tripura/Agartala</option>
+                    <option value="INXX0074">Uttar Pradesh/Lucknow </option>
+                    <option value="INXX0140">Uttarakhand/Dehradun</option>
+                    <option value="INXX0028">West Bengal/Kolkata</option>
+                    
+    		            <option value="0" selected>State/Capital</option>
+              </optgroup>
+               <optgroup label="Union Territories/Capital">
+       
+                    <option value="INXX0179">Andaman and Nicobar/Port Blair</option>
+                    <option value="INXX0185">Chandigarh/Chandigarh </option>
+                    <option value="INXX0034">Daman and Diu/Daman</option>
+                    <option value="INXX0038">Delhi/Delhi</option>
+                    <option value="INXX0101">Pondicherry/Pondicherry </option>
+               </optgroup>
+		</select>
+		<div class="ui-grid-a">
+            <div class="ui-block-a">
+            </div>
+            <div class="ui-block-b">
+            <p><a id="submit1" href="#popup" data-role="button" data-rel="dialog" data-transition="pop" data-icon="arrow-r">Submit</a></p>
+		<script type="text/javascript" src="js/weather.js"></script>
+            </div>
+        </div>
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="c" data-position="fixed">
+		<h5>birajkarmakar.wordpress.com<a href="http://birajkarmakar.wordpress.com"></a></h5>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Weather IN</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		
+	<div id="wxWrap">
+    <span id="wxIntro">
+        <center><font color=teal><b>Current Weather</b></font> 
+
+    </span>
+    <span id="wxIcon"></span>
+    <span id="wxTemp"></span></center>
+
+	</div>
+	
+		<p><a href="#two" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back </a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Biraj Karmakar</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+</body>
+</html>
