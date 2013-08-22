@@ -2,9 +2,9 @@
   "version": "1",
   "name": "Weather IN",
   "description": "Weather Details of Each State/Capital in India along with Date and Time ",
-  "launch_path": "/index.html",
+  "launch_path": "/weatherIN/index.html",
   "icons": {
-    "128": "/images/icon.png"
+    "128": "/weatherIN/images/icon.png"
   },
   "developer": {
     "name": "Biraj Karmakar",
